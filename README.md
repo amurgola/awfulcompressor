@@ -15,10 +15,38 @@ The decompression process simply needs to find the correct permutation of charac
 
 ## Usage
 
+### Demo
+
 ```bash
 pip install numpy
 python main.py
 ```
+
+### Compress a file
+
+```bash
+python example/compress.py <input_file> <output_file>
+```
+
+Example:
+
+```bash
+python example/compress.py photo.png photo.awful
+```
+
+### Decompress a file
+
+```bash
+python example/decompress.py <compressed_file> <output_file>
+```
+
+Example:
+
+```bash
+python example/decompress.py photo.awful photo.png
+```
+
+Note: Decompression randomly shuffles characters until the SHA-256 hash matches. Results may vary between now and the end of time.
 
 ## Pros
 
